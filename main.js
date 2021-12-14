@@ -6,37 +6,36 @@ const selectedItem = document.querySelector('.js_selected_item');
 const message = document.querySelector('.js_message');
 const userScore = document.querySelector('.js_user_scoreboard');
 let userValue = '';
+let machineItem = '';
 let count = 1;
 const randomNumber = getRandomNumber(10);
 console.log({ randomNumber });
 
-function compareUserValue(machineItem) {
+function compareUserValue(machineIt) {
   userValue = selectedItem.value;
-
-  if (machineItem === 'stone' && userValue === 'stone') {
+  console.log({ machineItem });
+  if (machineIt === 'stone' && userValue === 'stone') {
     message.innerHTML = 'Empate... Casi...';
-    console.log('MENSAJE' + message.innerHTML);
-  } else if (machineItem === 'stone' && userValue === 'scissors') {
+  } else if (machineIt === 'stone' && userValue === 'scissors') {
     message.innerHTML = 'Has perdido, lo siento';
-  } else if (machineItem === 'stone' && userValue === 'sheet') {
+  } else if (machineIt === 'stone' && userValue === 'sheet') {
     message.innerHTML = '¡Has ganado!';
-  } else if (machineItem === 'sheet' && userValue === 'stone') {
+  } else if (machineIt === 'sheet' && userValue === 'stone') {
     message.innerHTML = 'Has perdido, lo siento';
-  } else if (machineItem === 'sheet' && userValue === 'scissors') {
+  } else if (machineIt === 'sheet' && userValue === 'scissors') {
     message.innerHTML = '¡Has ganado!';
-  } else if (machineItem === 'sheet' && userValue === 'sheet') {
+  } else if (machineIt === 'sheet' && userValue === 'sheet') {
     message.innerHTML = 'Empate... Casi...';
-  } else if (machineItem === 'scissors' && userValue === 'stone') {
+  } else if (machineIt === 'scissors' && userValue === 'stone') {
     message.innerHTML = '¡Has ganado!';
-  } else if (machineItem === 'scissors' && userValue === 'scissors') {
+  } else if (machineIt === 'scissors' && userValue === 'scissors') {
     message.innerHTML = 'Empate... Casi...';
-  } else if (machineItem === 'scissors' && userValue === 'sheet') {
+  } else if (machineIt === 'scissors' && userValue === 'sheet') {
     message.innerHTML = 'Has perdido, lo siento';
   }
 }
 
 function translateRandomNumber(randomNumber) {
-  let machineItem = '';
   if (randomNumber <= 3) {
     machineItem = 'stone';
   } else if (randomNumber <= 6) {
@@ -44,7 +43,7 @@ function translateRandomNumber(randomNumber) {
   } else if (randomNumber > 6) {
     machineItem = 'scissors';
   }
-  return machineItem;
+  return console.log({ machineItem });
 }
 
 function getRandomNumber(max) {
@@ -60,7 +59,7 @@ function handleBtn(e) {
   e.preventDefault();
   getRandomNumber();
   translateRandomNumber(randomNumber);
-  compareUserValue();
+  compareUserValue(machineItem);
   // countUserTries();
   // changeResults();
 }
