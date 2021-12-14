@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Evaluación intermedia</title>
+  </head>
+  <body>
+    <h1 class="title">Juego Piedra, Papel o Tijera</h1>
+    <form action="" class="form">
+      <label for="" class="intro">Introduce aquí tu jugada:</label>
+      <select name="selected_item" id="selected_item" class="js_selected_item">
+        <option value="select" class="">Seleccione su jugada</option>
+        <option value="stone" class="">Piedra</option>
+        <option value="sheet" class="">Papel</option>
+        <option value="scissors" class="">Tijera</option>
+      </select>
+      <input type="submit" value="Jugar" class="js_btn btn" />
+    </form>
+    <p class="js_message">¡Vamos a jugar!</p>
+    <p>Jugador: <span class="js_user_scoreboard">0</span></p>
+    <p>Ordenador: <span class="js_machine_scoreboard">0</span></p>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
