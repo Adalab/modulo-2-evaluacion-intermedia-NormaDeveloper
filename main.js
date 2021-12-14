@@ -33,6 +33,7 @@ function compareUserValue(machineIt) {
   } else if (machineIt === 'scissors' && userValue === 'sheet') {
     message.innerHTML = 'Has perdido, lo siento';
   }
+  return message;
 }
 
 function translateRandomNumber(randomNumber) {
@@ -50,18 +51,28 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
-// function countUserTries() {
-//   if()
+// function countUserSuccess() {
 //   return (userScore.innerHTML = count++);
-// }-----NO HA DADO TIEMPO TERMINARLO
+// }
+
+// function controlUserScore(message) {
+//   if ((message.innerHTML === '¡Has ganado!')) {
+//     countUserSuccess();
+//   }
+//     else {
+//       countMachineSuccess();
+//     }
+
+// }
+//-----NO HA DADO TIEMPO TERMINARLO
 
 function handleBtn(e) {
   e.preventDefault();
   getRandomNumber();
   translateRandomNumber(randomNumber);
   compareUserValue(machineItem);
-  // countUserTries();
-  // changeResults();
+  // controlUserScore();
+  // countMachineSuccess();
 }
 
 btn.addEventListener('click', handleBtn);
