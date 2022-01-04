@@ -1,19 +1,25 @@
 'use strict';
 console.log('ready');
-//Variables
+
+//Global var
 const btn = document.querySelector('.js_btn');
 const selectedItem = document.querySelector('.js_selected_item');
 const message = document.querySelector('.js_message');
 const userScore = document.querySelector('.js_user_scoreboard');
+const machineScore = document.querySelector('.js_machine_scoreboard');
+const resetBtn = document.querySelector('.js_reset');
+const moves = document.querySelector('.js_move_scoreboard');
 let userValue = '';
 let machineItem = '';
-let count = 1;
-const randomNumber = getRandomNumber(10);
+let countUser = 1;
+let countMachine = 1;
+let totalMoves = 1;
+let randomNumber = 0;
+
 console.log({ randomNumber });
 
 function compareUserValue(machineIt) {
   userValue = selectedItem.value;
-  console.log({ machineItem });
   if (machineIt === 'stone' && userValue === 'stone') {
     message.innerHTML = 'Empate... Casi...';
   } else if (machineIt === 'stone' && userValue === 'scissors') {
@@ -33,7 +39,6 @@ function compareUserValue(machineIt) {
   } else if (machineIt === 'scissors' && userValue === 'sheet') {
     message.innerHTML = 'Has perdido, lo siento';
   }
-  return message;
 }
 
 function translateRandomNumber(randomNumber) {
@@ -51,28 +56,76 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
-// function countUserSuccess() {
-//   return (userScore.innerHTML = count++);
+function addPointToUserCounter() {
+  return (userScore.innerHTML = countUser++);
+}
+
+function addPointToMachineCounter() {
+  return (machineScore.innerHTML = countMachine++);
+}
+
+// function addMove() {
+//   return (moves.innerHTML = movesCounter++);
 // }
 
-// function controlUserScore(message) {
-//   if ((message.innerHTML === '¡Has ganado!')) {
-//     countUserSuccess();
-//   }
-//     else {
-//       countMachineSuccess();
-//     }
+function addOneMove() {
+  moves.innerHTML = totalMoves++;
+}
 
-// }
-//-----NO HA DADO TIEMPO TERMINARLO
+function controlScore() {
+  if (
+    (machineItem === 'stone' && userValue === 'sheet') ||
+    (machineItem === 'sheet' && userValue === 'scissors') ||
+    (machineItem === 'scissors' && userValue === 'stone')
+  ) {
+    console.log('suma un punto al usuario');
+    addPointToUserCounter();
+    addOneMove();
+  } else if (
+    (machineItem === 'stone' && userValue === 'scissors') ||
+    (machineItem === 'sheet' && userValue === 'stone') ||
+    (machineItem === 'scissors' && userValue === 'sheet')
+  ) {
+    console.log('suma un punto al robot');
+    addPointToMachineCounter();
+    addOneMove();
+  } else {
+    addOneMove();
+  }
+}
+
+function reset() {
+  totalMoves = 0;
+  countUser = 0;
+  countMachine = 0;
+  message.innerHTML = '¡Vamos a jugar!';
+  userScore.innerHTML = 0;
+  machineScore.innerHTML = 0;
+  moves.innerHTML = 0;
+}
+
+function gameOver() {
+  if (totalMoves === 11) {
+    alert('GAME OVER. Max: 10 movements');
+    reset();
+    return;
+  }
+}
 
 function handleBtn(e) {
   e.preventDefault();
-  getRandomNumber();
+  randomNumber = getRandomNumber(10);
   translateRandomNumber(randomNumber);
   compareUserValue(machineItem);
-  // controlUserScore();
-  // countMachineSuccess();
+  controlScore();
+  gameOver();
+  console.log({ totalMoves });
 }
 
+function handleReset() {
+  reset();
+}
+
+//Listeners
+resetBtn.addEventListener('click', handleReset);
 btn.addEventListener('click', handleBtn);
