@@ -16,8 +16,7 @@ let countMachine = 1;
 let totalMoves = 1;
 let randomNumber = 0;
 
-console.log({ randomNumber });
-
+//Functions
 function compareUserValue(machineIt) {
   userValue = selectedItem.value;
   if (machineIt === 'stone' && userValue === 'stone') {
@@ -64,10 +63,6 @@ function addPointToMachineCounter() {
   return (machineScore.innerHTML = countMachine++);
 }
 
-// function addMove() {
-//   return (moves.innerHTML = movesCounter++);
-// }
-
 function addOneMove() {
   moves.innerHTML = totalMoves++;
 }
@@ -106,9 +101,8 @@ function reset() {
 
 function gameOver() {
   if (totalMoves === 11) {
-    alert('GAME OVER. Max: 10 movements');
+    alert('GAME OVER. Máximo 10 jugadas');
     reset();
-    return;
   }
 }
 
