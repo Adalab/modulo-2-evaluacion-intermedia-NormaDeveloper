@@ -2,26 +2,49 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <title>Evaluación intermedia</title>
+    <title>Piedra, papel o tijera</title>
   </head>
   <body>
-    <h1 class="title">Juego Piedra, Papel o Tijera</h1>
-    <form action="" class="form">
-      <label for="" class="intro">Introduce aquí tu jugada:</label>
-      <select name="selected_item" id="selected_item" class="js_selected_item">
-        <option value="select" class="">Seleccione su jugada</option>
-        <option value="stone" class="">Piedra</option>
-        <option value="sheet" class="">Papel</option>
-        <option value="scissors" class="">Tijera</option>
-      </select>
-      <input type="submit" value="Jugar" class="js_btn btn" />
-      <input type="submit" value="Reset" class="js_reset btn" />
-    </form>
-    <p class="js_message">¡Vamos a jugar!</p>
-    <p>Jugador: <span class="js_user_scoreboard">0</span></p>
-    <p>Ordenador: <span class="js_machine_scoreboard">0</span></p>
-    <p>Número de jugadas: <span class="js_move_scoreboard">0</span></p>
+    <div class="container">
+      <h1 class="title">👊🏽 ✋🏽 ✌🏽</h1>
+      <form action="" class="form">
+        <label for="" class="intro">Selecciona tu jugada</label>
+        <select
+          name="selected_item"
+          id="selected_item"
+          class="js_selected_item select"
+        >
+          <option selected="true" disabled="disabled" value="select">
+            Elige uno
+          </option>
+          <option value="stone">Piedra</option>
+          <option value="sheet">Papel</option>
+          <option value="scissors">Tijera</option>
+        </select>
+        <div class="btns_container">
+          <input type="submit" value="Jugar" class="js_btn btn" />
+          <input type="submit" value="Reset" class="js_reset btn" />
+        </div>
+      </form>
+      <p class="js_message text">¡Vamos a jugar!</p>
+      <div class="players">
+        <p class="text-players">
+          👤
+          <span class="js_user_scoreboard score"> 0</span>
+        </p>
+        <p class="text-players">
+          <span class="js_machine_scoreboard score"> 0</span> 💻
+        </p>
+      </div>
+      <p>Jugadas <span class="js_move_scoreboard score">0</span></p>
+    </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

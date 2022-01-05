@@ -101,7 +101,7 @@ function reset() {
 
 function gameOver() {
   if (totalMoves === 11) {
-    alert('GAME OVER. Máximo 10 jugadas');
+    alert('GAME OVER. 10 jugadas. Has llegado al máximo de jugadas.');
     reset();
   }
 }
