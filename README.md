@@ -1,7 +1,7 @@
 # Rock-paper-scissors game
 ![](https://i.imgur.com/pNHUIUo.png)
 
-## Module 2: Intermediate Evaluation Exercise
+## Module 2: Intermediate Assessment Exercise
 The project consists of developing the game "Rock, Paper, Scissors". In the game both players have to make a Rock, Paper, Scissors. It has only two possible outcomes: a draw or a win for one player and a loss for the other player. The game is developed with JavaScript and one player will play against the computer.
 
 
