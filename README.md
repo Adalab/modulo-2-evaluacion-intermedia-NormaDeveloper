@@ -1,40 +1,52 @@
-# Juego de piedra, papel o tijera
+# Rock-paper-scissors game
 ![](https://i.imgur.com/pNHUIUo.png)
 
-## Módulo 2: Ejercicio de evaluación intermedia
-El ejercicio consiste en desarrollar el juego "Piedra, Papel y Tijera". En el juego ambos jugadores tienen que hacer una piedra, papel o tijeras. Solo tiene dos resultados posibles: un empate o una victoria para un jugador y una derrota para el otro jugador. Diseñaremos el juego usando JavaScript donde un jugador jugará contra la computadora.
-Antes de empezar, tenéis que crear un nuevo repositorio en GitHub desde GitHub Classroom usando este enlace. Una vez creado, lo clonaremos en nuestro ordenador y en la carpeta creada empezaremos a trabajar en el ejercicio.
-
-
-### Descripción
-El programa genera un movimiento al azar entre papel, piedra y tijera (las indicaciones para generar el movimiento al azar están más adelante). Posteriormente la usuaria juega, el programa compara los movimientos y decide si la usuaria ha ganado, perdido o empatado contra el ordenador. También a su vez el programa va contabilizando el número de puntos del jugador y del ordenador. El juego se reinicia se realicen 10 movimientos.
-### Indicaciones
-
-* En la parte superior, la jugadora selecciona la jugada del desplegable. Las opciones son Piedra, Papel y Tijera
-* Debajo, en el próximo apartado aparecen los siguientes textos: 
-* Al arrancar la página: ¡Vamos a Jugar!.
-    * Cuando la jugadora introduzca un movimiento que coincida con al movimiento aleatorio se muestra el mensaje: Empate.
-    * Cuando la jugadora introduzca un movimiento que gane al movimiento aleatorio se muestra el mensaje: ¡Has Ganado!.
-    * Cuando la jugadora introduzca un movimiento que falle al movimiento aleatorio se muestra el mensaje: ¡Has perdido!.
-* En la parte inferior deben aparecer los puntos de cada jugador.
+## Module 2: Intermediate Evaluation Exercise
+The project consists of developing the game "Rock, Paper, Scissors". In the game both players have to make a Rock, Paper, Scissors. It has only two possible outcomes: a draw or a win for one player and a loss for the other player. The game is developed with JavaScript and one player will play against the computer.
 
 
 
-#### Pasos para realizar el juego
-Para realizar el juego tenemos que realizar las siguientes funcionalidades desde JavaScript:
-*   Crear una maquetación mínima con el select, el espacio para el resultado y el espacio para los puntos de cada jugador.
-*   Generar un número aleatorio 
-*   Generar un movimiento aleatorio y para eso puedes seguir las siguientes indicaciones:
+### Project also developed with: 
+### 1. Attention to detail 🔎
+### 2. Clean and tidy code 🧹
+### 3. Fun 🎉 <br> <br> 
 
-    * si el número aleatorio generado en el paso anterior es menor que 3 el movimiento es piedra si el número aleatorio generado es mayor o igual que 6 el movimiento es papel
-    * y sino el movimiento generado es tijera
 
-* Comparar el movimiento que la jugadora ha seleccionado con el movimiento que ha generado la computadora, y pintar las pistas correspondientes en la pantalla.
-*  Actualizar el contador de puntos en cada jugada.
-*   El juego se reinicia cuando se hagan 10 movimientos
+### Description
+The program generates a random move between paper, rock and scissors (the indications to generate the random move are below). After the user plays, the program compares the moves and decides whether the user has won, lost or tied against the computer. The program also counts the number of points of the player and the computer. The game is restarted after 10 moves.
 
-### Bonus
-Si te queda tiempo y quieres completar las funcionalidades del juego, puedes hacer lo siguiente:
+### The game restarts when 10 moves are made.
 
-* El juego finaliza cuando llega a 10 movimientos, agrega el código necesario para que se muestre un botón Reiniciar Juego que vuelva a iniciar el juego cuando se cumpla esta condición y desaparezca el botón de Jugar.
-* Cuando le demos click a al botón Reiniciar Juego desaparece este botón, poner todos los contadores a cero y vuelve a aparecer el botón Jugar
+* At the top, the player selects the move from the drop-down menu. The options are Rock, Paper, Scissors.
+* Below, in the next section, the following texts appear: 
+* At the top of the page: Let's Play.
+    * When the player enters a move that matches the random move, the message: Tie is displayed.
+    * When the player enters a move that beats the random move the message: You Won! is displayed.
+    * When the player enters a move that fails to match the random move, the message: You lost!
+* The points of each player should be displayed at the bottom.
+
+
+
+#### Steps to play the game
+To make the game we have to perform the following functionalities from JavaScript:
+* Create a minimal layout with the select, the space for the result and the space for the points of each player.
+* Generate a random number 
+* Generate a random move and for that you can follow the following indications:
+    * if the random number generated in the previous step is less than 3 the move is stone if the random number generated is greater than or equal to 6 the move is paper.
+    * and if not, the movement generated is scissors.
+
+* Compare the move that the player has selected with the move that the computer has generated, and paint the corresponding clues on the screen.
+* Update the point counter at each move.
+* The game restarts when 10 moves are made.
+
+* The game ends when it reaches 10 moves, add the necessary code to display a Restart Game button that will restart the game when this condition is met and the Play button disappears.
+* When we click the Restart Game button, this button disappears, reset all the counters to zero and the Play button reappears.
+
+
+
+## About me
+
+ [![](https://i.imgur.com/RxMHei3.png)](https://www.linkedin.com/in/normarivas)         [![](https://i.imgur.com/C85yS6z.png)](https://twitter.com/NormaRivas_)  
+ 
+
+
